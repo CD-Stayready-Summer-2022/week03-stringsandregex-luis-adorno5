@@ -11,26 +11,17 @@ public class Result {
      */
 
     public long repeatedString(String s, long n) {
-        /*
-        if s.length == 1 && s.charAt(0) == 'a'
-            return n
-        n/s.length
-        n % s.length
-        count = 0
-        for i = 0; i<s.length; i++
-            if s.charAt(i) == 'a'
-                count++
-        */
-        int count = 0;
+
+        int countLetterA = 0;
         long fit = (n/s.length());
         long remainder = n % s.length();
 
         for (int i = 0; i<s.length(); i++){
             if(s.charAt(i) == 'a')
-                count++;
+                countLetterA++;
         }
 
-        long result = count * fit;
+        long result = countLetterA * fit;
 
         if (remainder > 0)
             for (int i = 0; i<remainder; i++)
