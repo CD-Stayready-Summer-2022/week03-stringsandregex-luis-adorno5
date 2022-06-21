@@ -37,10 +37,10 @@ public class RegexReplaceWordTest {
     void replaceNthOccurenceTest() {
         String regex = "\\bMe\\b";
         String input = "I throw the soccer ball. Me score a goal.";
-        String replace = "Me";
+        String replace = "I";
         String expected = "I throw the soccer ball. I score a goal.";
         String actual = RegexReplaceWord.replaceNthWord(regex, replace,
-                input, 2);
+                input, 1);
         Assertions.assertEquals(expected, actual);
     }
 }

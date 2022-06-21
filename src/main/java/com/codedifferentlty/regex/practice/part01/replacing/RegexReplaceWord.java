@@ -18,8 +18,15 @@ public class RegexReplaceWord {
     }
 
     public static String replaceNthWord(String regex, String replace, String input, int occurence){
+        int count = 0;
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(input);
+        while(m.find()){
+            count++;
+            if(count == occurence){
+                return m.replaceFirst(replace);
+            }
+        }
         return null;
     }
 
