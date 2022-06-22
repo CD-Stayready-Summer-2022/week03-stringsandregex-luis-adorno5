@@ -17,8 +17,7 @@ public class ReadingInDataMethod01 {
                                               String replace){
         String dataWithReplacement = "";
         try {
-            String data = readDataIn(pathToFile);
-            Matcher matcher = setupPatternAndMatcher(regex, data);
+            Matcher matcher = setupPatternAndMatcher(regex, readDataIn(pathToFile));
             dataWithReplacement = replaceDataWithSelected(matcher, replace);
         }catch (IOException ex){
             printExceptionToConsole(ex);

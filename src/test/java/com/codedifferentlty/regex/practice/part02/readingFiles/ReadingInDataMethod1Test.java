@@ -3,8 +3,6 @@ package com.codedifferentlty.regex.practice.part02.readingFiles;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.nio.file.Path;
-
 public class ReadingInDataMethod1Test {
 
     @Test
